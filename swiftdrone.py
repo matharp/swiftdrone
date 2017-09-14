@@ -38,7 +38,6 @@ class Drone:
     def __cmp__(self, other):
         return cmp(self.dist, other.dist)
 
-
 def is_valid_assignment(package, drone):
     current_time = int(time.time())
     needed_time = ((haversine((package.dest_lat, package.dest_long), (DEPO_LAT, DEPO_LONG)) + drone.dist)/SPEED_OF_DRONE ) * SECONDS_IN_HOUR
@@ -74,7 +73,6 @@ def queue_packages():
         packages.append(Package( i["packageId"], int(i["deadline"]), i["destination"]["latitude"], i["destination"]["longitude"] ))
     return sorted(packages)
 
-###
 assigned = []
 unassigned = [] 
 packages = queue_packages()
