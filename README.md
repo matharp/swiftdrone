@@ -1,5 +1,7 @@
 # swiftdrone.py
 
+https://github.com/GetSwift/codetest
+
 I implemented my solution in Python 2.7.13 as a simple script called swiftdrone.py. The script depends on two 3rd party packages: haversine (https://pypi.python.org/pypi/haversine) and requests (https://github.com/requests/requests). To run the script, please make sure you have the two packages installed and then just run the script in your shell. The script should consume the API, generate a solution and dump a JSON response. Every character was written in Vim :).
 
 Before I started writing any code, I tried to formalize the problem. Essentially, we need to implement a scheduler for a real-time system with soft deadlines. The scheduling algorithm has to be non-preemptive. The problem is analogues to the multi-processor scheduling problem with deadlines. The constraints entail that we need to use the earliest-deadline first algorithm.
